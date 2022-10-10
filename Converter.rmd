@@ -1,0 +1,25 @@
+---
+title: "Text Data"
+output: html_document
+date: "2022-08-30"
+---
+
+Run the chunk below first!
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(tidyverse)
+library(wordcloud2)
+```
+
+Click on the file Cleaning Text in the Files section in the bottom right frame, and look for it in the top left frame. Click on it, and follow the directions. Once you have done so, run the chunk below.
+
+```{r}
+words <- table(read_csv("mytext.csv", show_col_types = F))
+```
+
+Do you see an object named "words" in the Environment tab in the top right frame? Try clicking on it, and then try to find it so that you can see its contents!
+
+```{r}
+wordcloud2(words)
+```
